@@ -74,6 +74,8 @@ const Page1 = ({ navigation }) => {
               <Text style={{ color: "#FFFFFF", marginTop: 15, fontSize: 16, position: "absolute", paddingHorizontal: 35 }}>Add</Text>
             </View>
 
+
+
           </TouchableOpacity>
         </View>
 
@@ -84,7 +86,7 @@ const Page1 = ({ navigation }) => {
         <Text style={{ fontSize: 16,  color: "#939498", paddingRight: 5 }}>see all</Text>
         <AntDesign name="arrowright" size={24} color="#939498" />
       </View>
-      
+
 
 
 
