@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { View, SafeAreaView, FlatList, Text, Image, TouchableOpacity } from "react-native";
+import { View, SafeAreaView, FlatList, Text, Image, TouchableOpacity, StyleSheet, ImageBackground, ScrollView } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import { AntDesign } from '@expo/vector-icons';
-
-
+import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { BlurView } from "@react-native-community/blur";
+import LocationCard from "../components/LocationCard";
 
 import { COLORS, NFTData, assets, SHADOWS, FONTS } from '../constants';
 import { NFTcard, HomeHeader, FocusedStatesBar } from '../components';
@@ -81,11 +81,26 @@ const Page1 = ({ navigation }) => {
 
 
       </LinearGradient>
-      <View style={{ flexDirection: "row", paddingHorizontal: 20 ,marginTop:20,alignItems:"center"}}>
-        <Text style={{ fontSize: 16,  paddingRight: 100 }}>Nearby Tourists places</Text>
-        <Text style={{ fontSize: 16,  color: "#939498", paddingRight: 5 }}>see all</Text>
+      <View style={{ flexDirection: "row", paddingHorizontal: 20, marginTop: 20, alignItems: "center" }}>
+        <Text style={{ fontSize: 16, paddingRight: 100 }}>Nearby Tourists places</Text>
+        <Text style={{ fontSize: 16, color: "#939498", paddingRight: 5 }}>see all</Text>
         <AntDesign name="arrowright" size={24} color="#939498" />
       </View>
+      {/* <View style={{ height:240, borderRadius: 10 ,marginTop:15}}>
+        <Image style={{height:240,width:220,}}source={require('../assets/images/lake.png')} ></Image>
+        <Ionicons name="heart-circle-outline" size={28} color="white" style={{top:12,right:15,position:'absolute'}}/>
+       
+
+       
+       
+     </View> */}
+     <ScrollView horizontal={true} style={{marginTop:16}} >
+      <LocationCard Image={assets.lake}/>
+      <LocationCard Image={assets.lake2}/>
+      <LocationCard Image={assets.lake}/>
+      <LocationCard  Image={assets.lake2}/>
+
+     </ScrollView>
 
 
 
@@ -94,4 +109,6 @@ const Page1 = ({ navigation }) => {
 
   )
 }
-export default Page1
+export default Page1;
+
+

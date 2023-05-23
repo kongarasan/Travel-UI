@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/blur": "^4.3.2",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.9.8",
     "expo": "^48.0.0",
