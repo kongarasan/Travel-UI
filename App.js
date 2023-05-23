@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 import Home from './Screens/Home';
 import Details from './Screens/Details';
 import Page1 from './Screens/Page1';
+import Rental from './Screens/Rental';
 const Stack=createNativeStackNavigator();
 
 const App =() => {
@@ -15,13 +16,21 @@ const App =() => {
      InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
   });
   if(!loaded) return null;
+   const theme ={
+    ...DefaultTheme,
+    color: {
+      ...DefaultTheme.colors,
+      background: "white"
+    }
+   }
   return(
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <Stack.Navigator screenOptions={{headerShown: false}}
       initialRouteName="Home">
         <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name='Details' component={Details}/>
         <Stack.Screen name='Page1' component={Page1}/>
+        <Stack.Screen name='Rental' component={Rental}/>
       </Stack.Navigator>  
     </NavigationContainer>
   )

@@ -23,7 +23,9 @@ const Page1 = ({ navigation }) => {
       <Text style={{ fontSize: 16, marginTop: 20, marginRight: 250 }}>Our Services</Text>
 
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginHorizontal: 85 }}>
-        <TouchableOpacity style={{ justifyContent: "center", flexDirection: "row" }}>
+        <TouchableOpacity style={{ justifyContent: "center", flexDirection: "row" }}
+         onPress={() => {
+            navigation.navigate("Rental")}}>
           <View style={{ height: 60, width: "90%", backgroundColor: "#F5F5F5", marginTop: 20, borderRadius: 20, flexDirection: "row", alignItems: "center" }}>
             <Image style={{ height: 60, width: "40%", borderRadius: 8, marginTop: 5 }} source={require('../assets/images/cab.png')}></Image>
             <View>
