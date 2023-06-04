@@ -5,6 +5,8 @@ import Home from './Screens/Home';
 import Details from './Screens/Details';
 import Page1 from './Screens/Page1';
 import Rental from './Screens/Rental';
+import Cab from './Screens/Cab';
+import Laundary from './Screens/Laundary';
 const Stack=createNativeStackNavigator();
 
 const App =() => {
@@ -31,6 +33,8 @@ const App =() => {
         <Stack.Screen name='Details' component={Details}/>
         <Stack.Screen name='Page1' component={Page1}/>
         <Stack.Screen name='Rental' component={Rental}/>
+        <Stack.Screen name='Cab' component={Cab}/>
+        <Stack.Screen name='Laundary' component={Laundary}/>
       </Stack.Navigator>  
     </NavigationContainer>
   )
