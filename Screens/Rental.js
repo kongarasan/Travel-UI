@@ -160,8 +160,10 @@ return (
                 height: 289,
                 width: 326,
               }}>
-                <Text style={{ fontSize: 20 }}>Rent</Text>
-                <View style={{flexDirection: 'row', marginTop: 150, alignItems: 'center', justifyContent: "space-between", width:'100%' }}>
+              <Image  style={{height:59,width:78}}source={require('../assets/images/undraw.png')}></Image>
+                <Text style={{ fontSize: 20, marginTop:32 }}>Rent     Scooty  from</Text>
+                <Text style={{ fontSize: 20 ,color:"#98A3F4"}}>22nd Fed     9:00 AM</Text>
+                <View style={{flexDirection: 'row', marginTop: 50, alignItems: 'center', justifyContent: "space-between", width:'100%' }}>
                   <Pressable
                     style={{
                       borderRadius: 20,
