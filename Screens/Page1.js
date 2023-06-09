@@ -8,6 +8,7 @@ import LocationCard from "../components/LocationCard";
 import { COLORS, NFTData, assets, SHADOWS, FONTS } from '../constants';
 import { NFTcard, HomeHeader, FocusedStatesBar } from '../components';
 const Page1 = ({ navigation }) => {
+  
   return (
     <SafeAreaView style={{ flex: 1, alignItems: "center", backgroundColor: 'white' }}>
       <View style={{ marginRight: 20, marginTop: 0, flexDirection: "row" }}>
@@ -47,7 +48,9 @@ const Page1 = ({ navigation }) => {
       </View>
 
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginHorizontal: 85 }}>
-        <TouchableOpacity style={{ justifyContent: "center", flexDirection: "row" }}>
+        <TouchableOpacity style={{ justifyContent: "center", flexDirection: "row" }}
+         onPress={() =>{navigation.navigate('Foods')
+         }}>
           <View style={{ height: 60, width: "90%", backgroundColor: "#F5F5F5", marginTop: 20, borderRadius: 20, flexDirection: "row", alignItems: "center" }}>
             <Image style={{ height: 60, width: "40%", borderRadius: 8, marginTop: 5 }} source={require('../assets/images/food.png')}></Image>
             <View>
