@@ -53,7 +53,7 @@ const Details = ({ navigation }) => {
         <TouchableOpacity
           style={{ flex: 1, height: 59, width: "50%", borderRadius: 10, justifyContent: "center", alignItems: "center" }}
           onPress={() => {
-            navigation.navigate("Page1")
+            navigation.navigate("List")
 
           }}>
           <Text style={{ color: "white" }}>Sign In</Text>

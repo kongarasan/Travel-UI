@@ -33,7 +33,7 @@ const Rental = ({ navigation }) => {
   const [stack, setStack] = useState(-1)
   const [timeslot, setTimeslot] = useState(-1)
   const [modelView, setModelView] = useState(true)
-  
+  const [time,setTime] = useState("")
   
 return (
 
@@ -91,10 +91,10 @@ return (
           <Text style={{ fontSize: 18, marginTop: 39, marginHorizontal: 22 }}>Time slot </Text>
 
           <ScrollView horizontal={true} style={{ height: 45, marginTop: 5, flexGrow: 0 }} showsHorizontalScrollIndicator={false} contentContainerStyle={{}}>
-            <TimeSlot time="9:00 AM" color={timeslot != 1 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(1) }} />
-            <TimeSlot time="12:00 PM" color={timeslot != 2 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(2) }} />
-            <TimeSlot time="6:00 PM" color={timeslot != 3 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(3) }} />
-            <TimeSlot time="9:00 PM" color={timeslot != 4 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(4) }} />
+            <TimeSlot time="9:00 AM" color={timeslot != 1 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(1) }} setTime={setTime} />
+            <TimeSlot time="12:00 PM" color={timeslot != 2 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(2) }} setTime={setTime}/>
+            <TimeSlot time="6:00 PM" color={timeslot != 3 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(3) }} setTime={setTime} />
+            <TimeSlot time="9:00 PM" color={timeslot != 4 ? "#F2F6FF" : "#98A3F4"} onClick={() => { setTimeslot(4) }} setTime={setTime}/>
           </ScrollView>
           <Text style={{ fontSize: 18, marginTop: 32, marginHorizontal: 22 }}>Location</Text>
           {/* <View style={{height:48,width:306,backgroundColor:"#F5F5F5",borderRadius:10,marginTop:16,marginHorizontal:44,flexDirection:'row'}}>
@@ -162,7 +162,7 @@ return (
               }}>
               <Image  style={{height:59,width:78}}source={require('../assets/images/undraw.png')}></Image>
                 <Text style={{ fontSize: 20, marginTop:32 }}>Rent     Scooty  from</Text>
-                <Text style={{ fontSize: 20 ,color:"#98A3F4"}}>22nd Fed     9:00 AM</Text>
+                <Text style={{ fontSize: 20 ,color:"#98A3F4"}}>22nd Fed     {time}</Text>
                 <View style={{flexDirection: 'row', marginTop: 50, alignItems: 'center', justifyContent: "space-between", width:'100%' }}>
                   <Pressable
                     style={{
