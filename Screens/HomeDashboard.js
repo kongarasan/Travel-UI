@@ -6,12 +6,13 @@ import Rental from './Rental';
 import Cab from './Cab';
 import Laundary from './Laundary';
 import Foods from './Foods';
+
 const Stack=createNativeStackNavigator();
 const HomeDashboard =() => {
     return(
-        <NavigationContainer independent={true}>
+        <NavigationContainer independent={true} >
           <Stack.Navigator screenOptions={{headerShown: false}}
-          initialRouteName="Page1">
+          initialRouteName="Home">
             
              <Stack.Screen name='Page1' component={Page1}/>
             <Stack.Screen name='Rental' component={Rental}/>

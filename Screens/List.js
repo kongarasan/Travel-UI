@@ -3,11 +3,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { createAppContainer } from "react-navigation";
 import { createMaterialBottomTabNavigator } from
 	"react-navigation-material-bottom-tabs";
+	import { Feather,FontAwesome } from '@expo/vector-icons'; 
 
 import Page1 from "./Page1";
 import Profile from "./Profile";
 import SettingScreen from "./SettingScreen";
 import HomeDashboard from "./HomeDashboard";
+import FavList from "./FavList";
 
 const TabNavigator = createMaterialBottomTabNavigator(
 {
@@ -24,16 +26,21 @@ const TabNavigator = createMaterialBottomTabNavigator(
 		),
 	},
 	},
+	FavList: {
+		screen: FavList,
+		navigationOptions: {
+			tabBarLabel: "Lists",
+			tabBarIcon: (tabInfo) => (
+				<Feather name="list" size={24} color="black" />
+			),
+		},
+		},
 	User: {
 	screen: Profile,
 	navigationOptions: {
-		tabBarLabel: "User",
+		tabBarLabel: "Profile",
 		tabBarIcon: (tabInfo) => (
-		<Ionicons
-			name="md-person-circle-outline"
-			size={tabInfo.focused ? 26 : 20}
-			color={tabInfo.tintColor}
-		/>
+			<FontAwesome name="user" size={tabInfo.focused ? 26 : 20} color={tabInfo.tintColor} />
 		),
 	},
 	},
