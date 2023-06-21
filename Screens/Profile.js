@@ -27,33 +27,34 @@ const Profile = () => {
             </View>
          
             <View
-                style={{ flexDirection: "row" ,marginTop:25}}>
-                <View style={{ height: 90, width: 195 ,justifyContent:'center',borderWidth:1,borderColor:"#DFDFDF"}}>
+                style={{ flexDirection: "row" ,marginTop:25, borderWidth:1,borderColor:"#DFDFDF"}}>
+                <View style={{ height: 90, width: 195 ,justifyContent:'center'}}>
                     <Text style={{fontSize:20,color:'#319B3C',marginHorizontal:46}}>₹1800.00</Text>
                     <Text style={{fontSize:14,color:'#656565',marginHorizontal:69}}>Wallet</Text>
                 </View>
-                <View style={{ height: 90, width: 195,justifyContent:'center',borderWidth:1,borderColor:"#DFDFDF"}}>
+                <View style={{height:'100%', width:1, backgroundColor:'#DFDFDF'}}/>
+                <View style={{ height: 90, width: 195,justifyContent:'center'}}>
                     <View style={{height:40,width:100,backgroundColor:"#98A3F4",borderRadius:10,marginHorizontal:50}}>
                         <Text style={{textAlign:'center',marginTop:9,color:'white'}}>Add</Text>
                     </View>
                 </View>
             </View>
-            <View style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:23,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
+            <TouchableOpacity style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:23,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
             <MaterialIcons name="storefront" size={24} color="black" style={{marginTop:20,marginHorizontal:18}} />
             <Text style={{marginTop:23}}>Store Details</Text>
-            </View>
-            <View style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:15,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
+            </TouchableOpacity>
+            <TouchableOpacity style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:15,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
             <Ionicons name="md-wallet-outline" size={24} color="black"  style={{marginTop:20,marginHorizontal:18}} />
             <Text style={{marginTop:23}}>Payments</Text>
-            </View>
-            <View style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:15,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
+            </TouchableOpacity>
+            <TouchableOpacity style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:15,backgroundColor:'#FFFFFF',marginHorizontal:10}}>
             <FontAwesome5 name="user-friends" size={24} color="black"  style={{marginTop:20,marginHorizontal:18}} />
             <Text style={{marginTop:23}}>Tell Your Friend</Text>
-            </View>
-            <View style={{height:47,width:190,flexDirection:'row',borderRadius:10,marginTop:88,backgroundColor:'black',marginHorizontal:98}}>
+            </TouchableOpacity>
+            <TouchableOpacity style={{height:47,width:190,flexDirection:'row',borderRadius:10,marginTop:88,backgroundColor:'black',marginHorizontal:98}}>
            
             <Text style={{textAlign:'center',color:'white',fontSize:18,marginTop:10,marginHorizontal:60}}>Log Out </Text>
-            </View>
+            </TouchableOpacity>
             
             <View style={{height:60,width:370,flexDirection:'row',borderRadius:10,marginTop:15,backgroundColor:'#F2F2F2',marginHorizontal:10}}>
             
