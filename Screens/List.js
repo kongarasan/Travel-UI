@@ -9,7 +9,7 @@ import Page1 from "./Page1";
 import Profile from "./Profile";
 import SettingScreen from "./SettingScreen";
 import HomeDashboard from "./HomeDashboard";
-import FavList from "./FavList";
+
 
 const TabNavigator = createMaterialBottomTabNavigator(
 {
@@ -27,7 +27,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 	},
 	},
 	FavList: {
-		screen: FavList,
+		screen: Profile,
 		navigationOptions: {
 			tabBarLabel: "Lists",
 			tabBarIcon: (tabInfo) => (
